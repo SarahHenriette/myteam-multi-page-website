@@ -20,22 +20,13 @@ export default {
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+
 body {
   margin: 0;
 }
 #app {
   font-family: 'Livvic', sans-serif;
-  //colors primary
-  $midnightGreen: #014E56;
-  $lightCoral: #F67E7E;
-  $white: #FFF;
-
-  //colors secondary 
-  $raptureBlue: #79C8C7;
-  $policeBlue: #2C6269;
-  $deepJungleGreen: #004047;
-  $sacramentoStateGreen: #012F34;
-  $darkGreen: #002529;
 
   .btn {
     width: 153px;
@@ -48,6 +39,9 @@ body {
   .normal-state-light {
     border: 2px solid #FFFFFF;
     box-sizing: border-box;
+  }
+  p {
+    margin: 0;
   }
 
 
