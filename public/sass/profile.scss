@@ -1,0 +1,52 @@
+.btn-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .director-profile {
+    width: 350px;
+    height: 253px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .contain-infos-profil {
+    height: 165px;
+    width: 302px;
+    margin: auto;
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+  }
+  .name-director {
+      font-size: 18px;
+            line-height: 28px;
+            font-weight: 700;
+            color: $raptureBlue;
+            text-align: center;
+  }
+
+  @media screen and (max-width: 1120px) {
+      .director-profile {
+        width: 281px;
+        height: 253px;
+      }
+      .contain-infos-profil {
+        margin-top: 32px;
+      }
+  
+  }
+
+  @media screen and (max-width: 600px) {
+      .director-profile {
+          width: 372px;
+      }
+  }

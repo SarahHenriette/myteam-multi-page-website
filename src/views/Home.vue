@@ -1,152 +1,155 @@
 <template>
   <div class="home">
-    <header class="header-home">
-      <div class="text-header-home">
-        <h1>Find the<br/> best <span>talent</span></h1>
-        <p><span></span> Finding the right people and building high performing teams can 
-        be hard. Most companies aren’t tapping into the abundance of global 
-        talent. We’re about to change that.</p>
+    <Header />
+    <section class="keyPoints">
+      <div class="contain-text">
+        <h2><span></span> Build & manage distributed teams like no one else.</h2>
+        <div class="container-keysPoints">
+          <KeyPoint img="images/icon-person.svg" alt="jolie icon d'un individus" title="Experienced Individuals"
+            text="Our network is made up of highly experienced professionals who are passionate about what they do." />
+          <KeyPoint img="images/icon-cog.svg" alt="roue de parametre valide" title="Enhanced Productivity"
+            text="Our processes have been refined over years of implementation meaning our teams always deliver." />
+          <KeyPoint img="images/icon-chart.svg" alt="joli design de graphique" title="Enhanced Productivity"
+            text="Our customized platform with in-built analytics helps you manage your distributed teams." />
+        </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" class="img-background-dark" width="200" height="200"><g fill="none" fill-rule="evenodd"><path fill="#79C8C7" d="M100 200h100V100H100z"/><path fill="#012F34" d="M100 0C44.772 0 0 44.772 0 100s44.772 100 100 100 100-44.772 100-100S155.228 0 100 0zm0 67c18.225 0 33 14.775 33 33s-14.775 33-33 33-33-14.775-33-33 14.775-33 33-33z"/><path fill="#F67E7E" d="M196 196v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm49-8v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm49-8v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm35-8v4h4v-4h-4zm-14 0v4h4v-4h-4zm7 0v4h4v-4h-4zm-21 0v4h4v-4h-4zm7 0v4h4v-4h-4zm35 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-42 0v4h4v-4h-4zm49-8v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm49-8v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4z"/></g></svg>
-      <svg xmlns="http://www.w3.org/2000/svg" class="img-background-pink" width="358" height="100"><g fill="none" fill-rule="evenodd"><circle cx="100" cy="100" r="100" fill="#2C6269"/><path fill="#012F34" d="M258 0c55.228 0 100 44.772 100 100s-44.772 100-100 100-100-44.772-100-100S202.772 0 258 0zm0 67c-18.225 0-33 14.775-33 33s14.775 33 33 33 33-14.775 33-33-14.775-33-33-33z"/><path fill="#79C8C7" d="M358 43h-43V0h43z"/><path fill="#F67E7E" d="M233.514 0c55.228 0 100 44.772 100 100s-44.772 100-100 100c-55.229 0-100-44.772-100-100s44.771-100 100-100zm0 67c-18.226 0-33 14.775-33 33s14.774 33 33 33c18.225 0 33-14.775 33-33s-14.775-33-33-33z"/><path fill="#79C8C7" d="M100 40v4H0v-4h100zm0-8v4H0v-4h100zm0-8v4H0v-4h100zm0-8v4H0v-4h100zm0-8v4H0V8h100zm0-8v4H0V0h100z"/></g></svg>
-    </header>
+      <svg xmlns="http://www.w3.org/2000/svg" class="image-background" width="200" height="244">
+        <g fill="none" fill-rule="evenodd">
+          <path fill="#2C6269" d="M100 144H0V44h100z" />
+          <path fill="#014E56"
+            d="M100 44c55.228 0 100 44.772 100 100s-44.772 100-100 100S0 199.228 0 144 44.772 44 100 44zm0 67c-18.225 0-33 14.775-33 33s14.775 33 33 33 33-14.775 33-33-14.775-33-33-33z" />
+          <path fill="#79C8C7"
+            d="M100 184v4H0v-4h100zm0-8v4H0v-4h100zm0-8v4H0v-4h100zm0-8v4H0v-4h100zm0-8v4H0v-4h100zm0-8v4H0v-4h100zM4 40v4H0v-4h4zm7 0v4H7v-4h4zm7 0v4h-4v-4h4zm7 0v4h-4v-4h4zm7 0v4h-4v-4h4zm7 0v4h-4v-4h4zm7 0v4h-4v-4h4zm7 0v4h-4v-4h4zM4 32v4H0v-4h4zm7 0v4H7v-4h4zm7 0v4h-4v-4h4zm7 0v4h-4v-4h4zm7 0v4h-4v-4h4zm7 0v4h-4v-4h4zm7 0v4h-4v-4h4zm7 0v4h-4v-4h4zM4 24v4H0v-4h4zm7 0v4H7v-4h4zm7 0v4h-4v-4h4zm7 0v4h-4v-4h4zm7 0v4h-4v-4h4zm7 0v4h-4v-4h4zm7 0v4h-4v-4h4zm7 0v4h-4v-4h4zm-35-8v4h-4v-4h4zm14 0v4h-4v-4h4zm-7 0v4h-4v-4h4zm21 0v4h-4v-4h4zm-7 0v4h-4v-4h4zM4 16v4H0v-4h4zm7 0v4H7v-4h4zm42 0v4h-4v-4h4zM4 8v4H0V8h4zm7 0v4H7V8h4zm7 0v4h-4V8h4zm7 0v4h-4V8h4zm7 0v4h-4V8h4zm7 0v4h-4V8h4zm7 0v4h-4V8h4zm7 0v4h-4V8h4zM4 0v4H0V0h4zm7 0v4H7V0h4zm7 0v4h-4V0h4zm7 0v4h-4V0h4zm7 0v4h-4V0h4zm7 0v4h-4V0h4zm7 0v4h-4V0h4zm7 0v4h-4V0h4z" />
+        </g>
+      </svg>
+    </section>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-
+import Header from './../components/HeaderHome'
+import KeyPoint from './../components/KeyPoints'
 export default {
   name: 'Home',
   components: {
+    Header,
+    KeyPoint
+
+  },
+  data: function() {
+    return {
+      message: '',
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
   @import './public/sass/colors.scss';
-  
-  .header-home {
-    background-color: $midnightGreen;
+  .keyPoints {
+    background-color: $sacramentoStateGreen;
     width: 100%;
-    height: 700px;
+    height: 684px;
+    display: flex;
+    margin: auto;
     position: relative;
+    overflow: hidden;
 
-    .text-header-home {
-      width: 1110px;
-      height: 200px;
+    h2 {
+      margin: 0;
+      width: 445px;
+      height: 202px;
+      font-size: 48px;
+      line-height: 48px;
+      font-weight: 700;
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      span {
+        width: 50px;
+        height: 4px;
+        background-color: $lightCoral;
+      }
+    }
+
+    .contain-text {
       display: flex;
       margin: auto;
-      padding-top: 250px;
+      width: 1110px;
+      height: 404px;
+      justify-content: space-between;
 
-      h1 {
-        font-size: 100px;
-        font-weight: 700;
-        line-height: 100px;
-        color: $white;
-        width: 635px;
-        margin-top: 0;
-        margin-bottom: 0;
-
-        span {
-          color: $lightCoral;
-        }
-      }
-
-      p {
-        font-size: 18px;
-        line-height: 28px;
-        font-weight: 600;
-        width: 445px;
-        color: $white;
+      .container-keysPoints {
+        width: 540px;
+        height: 346px;
+        margin-top: 58px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
-        span {
-          width: 50px;
-          height: 4px;
-          background-color: $raptureBlue;
-        }
       }
     }
 
-    .img-background-dark {
+    .image-background {
       position: absolute;
-      top: 250px;
-      left: -100px;
-    }
-
-    .img-background-pink {
-      position: absolute;
-      top: 600px;
-      left: 917px;
+      right: -100px;
+      bottom: 0;
     }
   }
 
-  @media screen and (max-width: 1390px) {
-    .header-home {
-      width: 100%;
+  @media screen and (max-width: 1220px) {
+    .keyPoints {
+      flex-direction: column;
+      height: 710px;
 
-      .text-header-home {
-        width: 683px;
+      h2 {
+        margin-left: 0;
+        width: 445px;
+        height: 100px;
+        font-size: 32px;
+        line-height: 32px;
+      }
+
+      .contain-text {
+        width: 573px;
+        height: 510px;
         flex-direction: column;
-        align-items: center;
 
-        h1 {
-          font-size: 64px;
-          line-height: 56px;
-          text-align: center;
-          width: 100%;
-          margin-bottom: 24px;
-        }
-
-        p {
-          text-align: center;
-          font-size: 15px;
-          width: 505px;
-
-          span {
-            display: none;
-          }
+        .container-keysPoints {
+          margin-top: 64px;
+          margin-left: 0;
         }
       }
 
-      .img-background-dark {
-        display: none;
-      }
+    }
 
-      .img-background-pink {
-        position: absolute;
-        top: 600px;
-        left: 0;
-        right: 0;
-        margin: auto;
-      }
+    .image-background {
+      top: 0;
     }
   }
 
   @media screen and (max-width: 690px) {
-    .header-home {
-      height: 567px;
+    .keyPoints {
+      height: 1073px;
 
-      .text-header-home {
+      h2 {
+        width: 207px;
+        height: 196px;
+      }
+
+      .contain-text {
         width: 327px;
-        padding-top: 160px;
+        height: 945px;
 
-        h1 {
-          font-size: 40px;
-          line-height: 40px;
-        }
-
-        p {
-          width: 336px;
+        .container-keysPoints {
+          margin-top: 56px;
+          width: 327px;
+          height: 693px;
         }
       }
 
-      .img-background-pink {
-        top: 467px;
-      }
     }
   }
 </style>
