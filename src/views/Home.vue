@@ -23,19 +23,43 @@
         </g>
       </svg>
     </section>
+    <section class="testamonials">
+      <div class="contain-text">
+          <h2>Delivering real results for top companies. Some of our <span>success stories.</span></h2>
+          <div class="contain-testamonials">
+                <Testamonial text=" “The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.”" 
+                      name="Kady Baker" profession="Product Manager at Bookmark" img="images/avatar-kady.jpg" alt="kady, portrait d'une femme blonde et souriante"/>
+
+                <Testamonial text="“We needed to automate our entire onboarding process. The team came in and built out the whole journey. Since going live, user retention has gone through the roof!”"
+                              name="Aiysha Reese" profession="Founder of Manage" img="images/avatar-aiysha.jpg" alt="aiysha, très belle femme entrepreneuse"/>
+
+                <Testamonial text="“Amazing. Our team helped us build an app that delivered a new experience for hiring a physio. The launch was an instant success with 100k downloads in the first month.”" 
+                              name="Arthur Clarke" profession="Co-founder of MyPhysio" img="images/avatar-arthur.jpg" alt="arthur, homme fort et expérimenté"/>         
+          </div>  
+          <svg xmlns="http://www.w3.org/2000/svg" class="image-background-top" width="147" height="100"><g fill="none" fill-rule="evenodd"><path fill="#002529" d="M0 100h100V0H0z"/><path fill="#79C8C7" d="M47 96v4h100v-4H47zm0-8v4h100v-4H47zm0-8v4h100v-4H47zm0-8v4h100v-4H47zm0-8v4h100v-4H47zm0-8v4h100v-4H47z"/></g></svg>         
+          <svg xmlns="http://www.w3.org/2000/svg" class="image-background-bottom" width="200" height="100"><g fill="none" fill-rule="evenodd"><path fill="#2C6269" d="M100 100h100V0H100z"/><path fill="#012F34" d="M100 0C44.772 0 0 44.772 0 100s44.772 100 100 100 100-44.772 100-100S155.228 0 100 0zm0 67c18.225 0 33 14.775 33 33s-14.775 33-33 33-33-14.775-33-33 14.775-33 33-33z"/><path fill="#79C8C7" d="M100 96v4h100v-4H100zm0-8v4h100v-4H100zm0-8v4h100v-4H100zm0-8v4h100v-4H100zm0-8v4h100v-4H100zm0-8v4h100v-4H100z"/></g></svg>
+      </div>
+    </section>
+    <ContactUs/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import Header from './../components/HeaderHome'
 import KeyPoint from './../components/KeyPoints'
+import Testamonial from './../components/Testamonial'
+import ContactUs from './../components/ContactUs'
+import Footer from './../components/Footer'
+
 export default {
   name: 'Home',
   components: {
     Header,
-    KeyPoint
-
+    KeyPoint,
+    Testamonial,
+    ContactUs,
+    Footer
   },
   data: function() {
     return {
@@ -152,4 +176,77 @@ export default {
 
     }
   }
+
+  .testamonials {
+    width: 100%;
+    height: 745px;
+    background-color: $midnightGreen;
+    position: relative;
+    h2 {
+      width: 932px;
+      height: 96px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 48px;
+      text-align: center;
+      color: $white;
+      margin: auto;
+      padding-top: 140px;
+      padding-bottom: 56px;
+      span {
+        color: $raptureBlue;
+      }
+    }
+    .contain-testamonials {
+      display: flex;
+      justify-content: space-between;
+      width: 1110px;
+      height: 313px;
+      margin: auto;
+    }
+    .image-background-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .image-background-bottom {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+      @media screen and (max-width: 1140px) {
+        .testamonials {
+          height: 1199px;
+          h2 {
+            width: 485px;
+            height: 96px;
+            font-size: 32px;
+            line-height: 32px;
+            padding-top: 100px;
+            padding-bottom: 48px;
+          }
+         .contain-testamonials {
+           flex-direction: column;
+           height: 855px;
+           width: 573px;
+         }
+        }
+    }
+
+      @media screen and (max-width: 600px) {
+          .testamonials {
+            height: 1410px;
+            h2 {
+              width: 327px;
+              height: 128px;
+              padding-top: 140px;
+            }
+            .contain-testamonials {
+              width: 327px;
+              height: 930px;
+            }
+          }
+      }
 </style>
