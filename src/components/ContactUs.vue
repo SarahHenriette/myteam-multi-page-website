@@ -47,6 +47,12 @@ export default {
                 border-style: solid;
                 border-color: $darkGreen;
                 color: $darkGreen;
+                cursor: pointer;
+                transition: background-color ease .5s, color ease .5s;;
+                &:hover {
+                    background-color: $darkGreen;
+                    color: $white;
+                }
             }
         }
         svg {
