@@ -93,6 +93,7 @@ export default {
     }
     .nav-principal {
         display: flex;
+        align-items: center;
         #logo {
             list-style-type: none;
         }
