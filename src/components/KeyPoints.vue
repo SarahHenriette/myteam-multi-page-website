@@ -18,7 +18,7 @@ export default {
   @import './public/sass/colors.scss';
 .keyPoint {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: 540px;
     height: 94px;
 
@@ -30,6 +30,8 @@ export default {
             color: $lightCoral;
             margin-top: 0;
             margin-bottom: 16px;
+            font-size: 18px;
+            font-weight: 700;
         }
 
         p {

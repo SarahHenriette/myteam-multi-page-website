@@ -180,7 +180,7 @@ export default {
 .testamonials {
   width: 100%;
   height: 745px;
-  background-color: $midnightGreen;
+  background-color: $deepJungleGreen;
   position: relative;
 
   h2 {

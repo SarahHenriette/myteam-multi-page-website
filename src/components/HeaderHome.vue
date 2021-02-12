@@ -61,7 +61,7 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
+      padding-left: 30px;  
       span {
         width: 50px;
         height: 4px;

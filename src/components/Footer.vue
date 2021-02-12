@@ -2,10 +2,10 @@
 <footer>
     <div class="infos">
        <div class="nav-footer">
-           <img src="images/logo.svg" alt="">
+           <img src="images/logo.svg" alt="lodo de my team">
             <ul>
-                <li><a href="">home</a></li>
-                <li><a href="">about</a></li>
+                <li><router-link to="/">home</router-link></li>
+                <li><router-link to="/about">about</router-link></li>
             </ul>
        </div>
         <p class="adresse">987  Hillcrest Lane<br/> Irvine, CA<br/> California 92714<br/> Call Us : 949-833-7432</p>
@@ -36,13 +36,15 @@ footer {
     height: 196px;
     background-color: $darkGreen;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
-
+    position: relative;
     .infos {
         width: 730px;
         height: 100px;
         display: flex;
+        position: absolute;
+        left: 165px;
 
         .nav-footer {
             display: flex;
@@ -56,7 +58,7 @@ footer {
                 li {
                     list-style: none;
                     margin-right: 40px;
-
+                    cursor: pointer;
                     a {
                         color: $white;
                         text-decoration: none;
@@ -87,6 +89,8 @@ footer {
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
+        position: absolute;
+        right: 165px;
 
         .icon-reseau {
             svg {
