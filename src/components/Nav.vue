@@ -1,7 +1,7 @@
 <template>
     <nav id="nav" class="background-midnight-green">
         <div class="nav-principal">
-            <li id="logo"><router-link to="/"><img src="images/logo.svg" alt="logo de my team"></router-link></li>
+            <span id="logo"><router-link to="/"><img src="images/logo.svg" alt="logo de my team"></router-link></span>
             <ul class="links-home-about">
                 <li><router-link to="/">home</router-link></li>
                 <li><router-link to="/about">about</router-link></li>
