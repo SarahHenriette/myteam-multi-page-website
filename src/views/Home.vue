@@ -177,76 +177,86 @@ export default {
     }
   }
 
-  .testamonials {
-    width: 100%;
-    height: 745px;
-    background-color: $midnightGreen;
-    position: relative;
-    h2 {
-      width: 932px;
-      height: 96px;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 48px;
-      line-height: 48px;
-      text-align: center;
-      color: $white;
-      margin: auto;
-      padding-top: 140px;
-      padding-bottom: 56px;
-      span {
-        color: $raptureBlue;
-      }
-    }
-    .contain-testamonials {
-      display: flex;
-      justify-content: space-between;
-      width: 1110px;
-      height: 313px;
-      margin: auto;
-    }
-    .image-background-top {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    .image-background-bottom {
-      position: absolute;
-      bottom: 0;
-      right: 0;
+.testamonials {
+  width: 100%;
+  height: 745px;
+  background-color: $midnightGreen;
+  position: relative;
+
+  h2 {
+    width: 932px;
+    height: 96px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: $white;
+    margin: auto;
+    padding-top: 140px;
+    padding-bottom: 56px;
+
+    span {
+      color: $raptureBlue;
     }
   }
-      @media screen and (max-width: 1140px) {
-        .testamonials {
-          height: 1199px;
-          h2 {
-            width: 485px;
-            height: 96px;
-            font-size: 32px;
-            line-height: 32px;
-            padding-top: 100px;
-            padding-bottom: 48px;
-          }
-         .contain-testamonials {
-           flex-direction: column;
-           height: 855px;
-           width: 573px;
-         }
-        }
+
+  .contain-testamonials {
+    display: flex;
+    justify-content: space-between;
+    width: 1110px;
+    height: 313px;
+    margin: auto;
+  }
+
+  .image-background-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .image-background-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .testamonials {
+    height: 1199px;
+
+    h2 {
+      width: 485px;
+      height: 96px;
+      font-size: 32px;
+      line-height: 32px;
+      padding-top: 100px;
+      padding-bottom: 48px;
     }
 
-      @media screen and (max-width: 600px) {
-          .testamonials {
-            height: 1410px;
-            h2 {
-              width: 327px;
-              height: 128px;
-              padding-top: 140px;
-            }
-            .contain-testamonials {
-              width: 327px;
-              height: 930px;
-            }
-          }
-      }
+    .contain-testamonials {
+      flex-direction: column;
+      height: 855px;
+      width: 573px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .testamonials {
+    height: 1410px;
+
+    h2 {
+      width: 327px;
+      height: 128px;
+      padding-top: 140px;
+    }
+
+    .contain-testamonials {
+      width: 327px;
+      height: 930px;
+    }
+  }
+}
 </style>

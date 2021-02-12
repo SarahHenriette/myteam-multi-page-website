@@ -21,85 +21,93 @@ export default {
 <style lang="scss" scoped>
   @import './public/sass/colors.scss';
 
-    .testamonial {
-        width: 370px;
-        height: 313px;
-        position: relative;
-        .contain-text {
-            position: absolute;
-            bottom: 0;
-            z-index: 5;
-            .text-testamonial {
-                font-style: normal;
-                font-weight: 600;
-                font-size: 15px;
-                line-height: 25px;
-                text-align: center;
-                color: $white;
-                
-            }
-            .name-telltale {
-                font-style: normal;
-                font-weight: bold;
-                font-size: 18px;
-                line-height: 28px;
-                text-align: center;
-                color: $raptureBlue;
-                padding-top: 24px;
-            }
-            .profession-telltale {
-                font-style: italic;
-                font-weight: 500;
-                font-size: 13px;
-                line-height: 18px;
-                text-align: center;
-                color: $white;
-                padding-top: 2px;
-                padding-bottom: 32px;
-            }
-            .container-image {
-                height: 62px;
-                width: 62px;
-                border: 2px solid #C4FFFE;
-                overflow: hidden;
-                border-radius: 50%;
-                margin: auto;
-                img {
-                    width: 100%;
-                }
-            }
+.testamonial {
+    width: 370px;
+    height: 313px;
+    position: relative;
+
+    .contain-text {
+        position: absolute;
+        bottom: 0;
+        z-index: 5;
+
+        .text-testamonial {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 25px;
+            text-align: center;
+            color: $white;
+
         }
-      
-        svg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+
+        .name-telltale {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: center;
+            color: $raptureBlue;
+            padding-top: 24px;
+        }
+
+        .profession-telltale {
+            font-style: italic;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 18px;
+            text-align: center;
+            color: $white;
+            padding-top: 2px;
+            padding-bottom: 32px;
+        }
+
+        .container-image {
+            height: 62px;
+            width: 62px;
+            border: 2px solid #C4FFFE;
+            overflow: hidden;
+            border-radius: 50%;
             margin: auto;
-        }
-    }
 
-    @media screen and (max-width: 1140px) {
-        .testamonial {
-            width: 573px;
-            height: 253px;
-            .contain-text {
-                .name-telltale {
-                    padding-top: 16px;
-                }
-                .profession-telltale {
-                    padding-bottom: 16px;
-                }
+            img {
+                width: 100%;
             }
         }
     }
 
-    @media screen and (max-width: 600px) {
-        .testamonial {
-            width: 327px;
-            height: 278px;
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .testamonial {
+        width: 573px;
+        height: 253px;
+
+        .contain-text {
+            .name-telltale {
+                padding-top: 16px;
+            }
+
+            .profession-telltale {
+                padding-bottom: 16px;
+            }
         }
     }
+}
+
+@media screen and (max-width: 600px) {
+    .testamonial {
+        width: 327px;
+        height: 278px;
+    }
+}
 
 </style>
     

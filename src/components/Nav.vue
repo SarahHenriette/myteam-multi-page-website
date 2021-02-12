@@ -48,162 +48,163 @@ export default {
     
 
 <style lang="scss">
-    @import './public/sass/colors.scss';
-    #nav {
-        width: 1110px;
-        height: 48px;
-        background-color: $midnightGreen;
+@import './public/sass/colors.scss';
+
+#nav {
+    width: 1110px;
+    height: 48px;
+    background-color: $midnightGreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    top: 73px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    ul {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        margin: auto;
-        position: absolute;
-        top: 73px;
-        left: 0;
-        right: 0;
-        z-index: 5;
-        ul {
-            display: flex;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-            #logo {
-                margin-right: 80px;
+        margin: 0;
+        padding: 0;
+        #logo {
+            margin-right: 80px;
+        }
+        .links-home-about {
+            li {
+                margin-right: 40px;
             }
-            .links-home-about {
-                li {
-                    margin-right: 40px;
+        }
+        li {
+            list-style: none;
+        }
+        li a {
+            text-decoration: none;
+            color: $white;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color ease .5s;
+
+        }
+        li a:hover {
+            color: $lightCoral;
+        }
+    }
+    .link-contact {
+        li {
+            cursor: pointer;
+                            transition: background-color ease .5s;
+
+        }
+            li:hover {
+                background-color: $white;
+                a {
+                    color: $midnightGreen;
                 }
             }
+        }
+    .nav-mobile {
+        display: none;
+    }
+    .active {
+        display: flex!important;
+    }
+    .background-menu-nav-mobile {
+        width: 375px;
+        height: 667px;
+        background-color: $darkGreen;
+        opacity: 0.8;
+        position: absolute;
+        top: -48px;
+        left: -24px;
+        display: none;
+    }
+    .menu-nav-mobile {
+        width: 255px;
+        height: 667px;
+        background-color: $midnightGreen;
+        position: absolute;
+        right: -24px;
+        top: -48px;
+        z-index: 5;
+        display: none;
+        flex-direction: column;
+        animation: display 1s ease;
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 56px;
+        }
+        .background-image {
+            position: absolute;
+            bottom: 0;
+            right: -100px;
+        }
+        .links-home-about-mobil {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 112px;
+            left: 48px;
             li {
-                list-style: none;
+                margin-bottom: 24px;
             }
-            li a {
-                text-decoration: none;
-                color: $white;
-                font-size: 18px;
-                font-weight: 600;
-                transition: color ease .5s;
+            margin-bottom: 36px;
+        }
+        .link-contact-mobile {
+            position: absolute;
+            top: 228px;
+            left: 48px;
+        }
+    }
 
-            }
-            li a:hover {
-                color: $lightCoral;
-            }
+    @keyframes display {
+        0% { right : -279px }
+        100%{ right : -24px }
+    }
+    @keyframes hide {
+        0% { right : -24px }
+        100%{ right : -279px }
+    }
+
+}
+
+@media screen and (max-width: 1390px) {
+    #nav {
+        width: 689px;
+        ul #logo {
+            margin-right: 48px;
+        }
+    }
+}
+@media  screen and (max-width: 759px) {
+    #nav {
+        width: 463px;
+        .nav-principal .links-home-about {
+            display: none;
         }
         .link-contact {
-            li {
-                cursor: pointer;
-                                transition: background-color ease .5s;
-
-            }
-                li:hover {
-                    background-color: $white;
-                    a {
-                        color: $midnightGreen;
-                    }
-                }
-            }
+            display: none;
+        }
         .nav-mobile {
-            display: none;
-        }
-        .active {
-            display: flex!important;
-        }
-        .background-menu-nav-mobile {
-            width: 375px;
-            height: 667px;
-            background-color: $darkGreen;
-            opacity: 0.8;
-            position: absolute;
-            top: -48px;
-            left: -24px;
-            display: none;
-        }
-        .menu-nav-mobile {
-            width: 255px;
-            height: 667px;
-            background-color: $midnightGreen;
-            position: absolute;
-            right: -24px;
-            top: -48px;
-            z-index: 5;
-            display: none;
-            flex-direction: column;
-            animation: display 1s ease;
-            .close {
-                position: absolute;
-                right: 25px;
-                top: 56px;
-            }
-            .background-image {
-                position: absolute;
-                bottom: 0;
-                right: -100px;
-            }
-            .links-home-about-mobil {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 112px;
-                left: 48px;
-                li {
-                    margin-bottom: 24px;
-                }
-                margin-bottom: 36px;
-            }
-            .link-contact-mobile {
-                position: absolute;
-                top: 228px;
-                left: 48px;
-            }
-        }
-
-        @keyframes display {
-            0% { right : -279px }
-            100%{ right : -24px }
-        }
-        @keyframes hide {
-            0% { right : -24px }
-            100%{ right : -279px }
-        }
-    
-    }
-
-    @media screen and (max-width: 1390px) {
-        #nav {
-            width: 689px;
-            ul #logo {
-                margin-right: 48px;
-            }
+            display: block;
         }
     }
-    @media  screen and (max-width: 759px) {
-        #nav {
-            width: 463px;
-            .nav-principal .links-home-about {
-                display: none;
-            }
-            .link-contact {
-                display: none;
-            }
-            .nav-mobile {
-                display: block;
-            }
-        }
-    }
-    @media screen and (max-width: 734px) {
-        #nav {
-            width: 327px;
-            height: 32px;
-            top: 48px;
-            .nav-principal {
-                #logo {
-                    img {
-                        width: 128px;
-                        height: 32px;
-                    }
+}
+@media screen and (max-width: 734px) {
+    #nav {
+        width: 327px;
+        height: 32px;
+        top: 48px;
+        .nav-principal {
+            #logo {
+                img {
+                    width: 128px;
+                    height: 32px;
                 }
             }
         }
     }
+}
 </style>

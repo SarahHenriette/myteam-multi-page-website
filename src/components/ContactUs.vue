@@ -10,89 +10,99 @@
 
 <script>
 export default {
-    
 }
 </script>
 
 <style lang="scss" scoped>
 @import './public/sass/colors.scss';
 
-    .contact-us {
-        width: 100%;
-        height: 200px;
-        background-color: $lightCoral;
+.contact-us {
+    width: 100%;
+    height: 200px;
+    background-color: $lightCoral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    .contain-text {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        position: relative;
-        overflow: hidden;
+        width: 917px;
+        height: 48px;
+
+        h2 {
+            color: $darkGreen;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 48px;
+        }
+
+        .btn-contact-us {
+            background-color: $lightCoral;
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 600;
+            border-style: solid;
+            border-color: $darkGreen;
+            color: $darkGreen;
+            cursor: pointer;
+            transition: background-color ease .5s, color ease .5s;
+            ;
+
+            &:hover {
+                background-color: $darkGreen;
+                color: $white;
+            }
+        }
+    }
+
+    svg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .contact-us {
         .contain-text {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 917px;
-                height: 48px;
+            width: 573px;
+
             h2 {
-                color: $darkGreen;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 48px;
-                line-height: 48px;
-            }
-            .btn-contact-us {
-                background-color: $lightCoral;
-                font-size: 18px;
-                line-height: 28px;
-                font-weight: 600;
-                border-style: solid;
-                border-color: $darkGreen;
-                color: $darkGreen;
-                cursor: pointer;
-                transition: background-color ease .5s, color ease .5s;;
-                &:hover {
-                    background-color: $darkGreen;
-                    color: $white;
-                }
+                font-size: 32px;
+                line-height: 32px;
             }
         }
+
         svg {
-            position: absolute;
-            bottom: 0;
-            left: 0;
+            bottom: -22px;
         }
     }
+}
 
-    @media screen and (max-width: 1120px) {
-        .contact-us {
-            .contain-text {
-                width: 573px;
-                h2 {
-                    font-size: 32px;
-                    line-height: 32px;
-                }
-            }
-            svg {
-                bottom: -22px;
-            }
-        }
-    }
+@media screen and (max-width: 600px) {
+    .contact-us {
+        height: 302px;
 
-    @media screen and (max-width: 600px) {
-        .contact-us {
-            height: 302px;
-            .contain-text {
-                height: 136px;
-                width: 327px;
-                flex-direction: column;
-                h2 {
-                    text-align: center;
-                    margin-top: 0;
-                    margin-bottom: 24px;
-                }
-                .btn-contact-us {
-                    padding: 9px 0 11px 0;
-                }
+        .contain-text {
+            height: 136px;
+            width: 327px;
+            flex-direction: column;
+
+            h2 {
+                text-align: center;
+                margin-top: 0;
+                margin-bottom: 24px;
+            }
+
+            .btn-contact-us {
+                padding: 9px 0 11px 0;
             }
         }
     }
+}
 </style>

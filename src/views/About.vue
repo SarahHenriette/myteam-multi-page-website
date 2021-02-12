@@ -10,8 +10,6 @@
         <Profile img = "images/avatar-drake.jpg" alt="drake, un homme sérieux et travailleur" name ="Drake Heaton" profession ="Business Development Lead" citation="“Empowered teams create truly amazing products. Set the north star and let them follow it.”"/>
         <Profile img = "images/avatar-griffin.jpg" alt="griffin, jeune homme très compétent" name ="Griffin Wise" profession ="Lead Marketing" citation="“Empowered teams create truly amazing products. Set the north star and let them follow it.”"/>
         <Profile img = "images/avatar-aden.jpg" alt="aden, jeune homme très fun et travailleur" name ="Aden Allen" profession = "Head of talent" citation="“Empowered teams create truly amazing products. Set the north star and let them follow it.”"/>
-        
-        <!-- <ProfileReverse name="Aden Allan" alt="allan, jeune hommme competent" citation="“Empowered teams create truly amazing products. Set the north star and let them follow it.”"/> -->
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" class="img-background-top" width="200" height="200"><g fill="none" fill-rule="evenodd"><path fill="#2C6269" d="M100 100h100V0H100z"/><path fill="#012F34" d="M100 0C44.772 0 0 44.772 0 100s44.772 100 100 100 100-44.772 100-100S155.228 0 100 0zm0 67c18.225 0 33 14.775 33 33s-14.775 33-33 33-33-14.775-33-33 14.775-33 33-33z"/><path fill="#79C8C7" d="M100 96v4h100v-4H100zm0-8v4h100v-4H100zm0-8v4h100v-4H100zm0-8v4h100v-4H100zm0-8v4h100v-4H100zm0-8v4h100v-4H100z"/><path fill="#F67E7E" d="M196 140v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm49-8v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm49-8v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm35-8v4h4v-4h-4zm-14 0v4h4v-4h-4zm7 0v4h4v-4h-4zm-21 0v4h4v-4h-4zm7 0v4h4v-4h-4zm35 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-42 0v4h4v-4h-4zm49-8v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm49-8v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4zm-7 0v4h4v-4h-4z"/></g></svg>
       <svg xmlns="http://www.w3.org/2000/svg" class="img-background-bottom" width="147" height="100"><g fill="none" fill-rule="evenodd"><path fill="#002529" d="M0 100h100V0H0z"/><path fill="#79C8C7" d="M47 96v4h100v-4H47zm0-8v4h100v-4H47zm0-8v4h100v-4H47zm0-8v4h100v-4H47zm0-8v4h100v-4H47zm0-8v4h100v-4H47z"/></g></svg>
@@ -43,10 +41,8 @@
 </template>
 
 <script>
-  // @ is an alias to /src
   import Header from "./../components/HeaderAbout"
   import Profile from "./../components/Profile"
-  // import ProfileReverse from  "./../components/ProfileReverse"
   import ContactUs from './../components/ContactUs'
   import Footer from './../components/Footer'
   export default {
@@ -54,23 +50,9 @@
     components: {
       Header,
       Profile,
-      // ProfileReverse,
       ContactUs,
       Footer
     }, 
-    // data (){
-    //   return {
-    //     test: true,      
-          
-    //   }
-     
-    // },
-    //    methods: {
-    //     test2: function (){
-
-    //     }
-    // }
-    
   }
 </script>
 

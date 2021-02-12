@@ -46,8 +46,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import './public/sass/colors.scss';
-    @import './public/sass/profile.scss';
+@import './public/sass/colors.scss';
+@import './public/sass/profile.scss';
 
 .general-profile {
     background-color: $sacramentoStateGreen;
@@ -104,12 +104,10 @@ export default {
           }
         }
     }
-    
-
     .pink {
         background-color: $lightCoral;
         cursor: pointer;
-        transition: background-color ease .5s;
+        transition: background-color ease .2s;
         
         &:hover {
             background-color: $raptureBlue;
@@ -125,7 +123,7 @@ export default {
     .active {
         background-color: $raptureBlue;
         cursor: pointer;
-        transition: background-color ease .5s;
+        transition: background-color ease .2s;
         &:hover {
             background-color: $lightCoral;
         }

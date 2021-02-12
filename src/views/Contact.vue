@@ -75,7 +75,6 @@ export default {
         this.verifyValidEmail()
 
         if(this.name.value !== "" && this.email.value !== "" && this.message.value !== "") {
-          console.log("le message est envoyé")
           alert('Votre message à bien été envoyé')
           this.name.value = ""
           this.email.value= ""
@@ -91,7 +90,6 @@ export default {
         }
       },
       focusInput(e){
-        console.log(this.name )
         this.actionFocusInput(e, "name", this.name)
         this.actionFocusInput(e, "email", this.email)
         this.actionFocusInput(e, "message", this.message)
@@ -105,8 +103,7 @@ export default {
       verifyValidEmail() {
         let emailValid = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
         if(emailValid.test(this.email.value) ) {
-          return console.log(true)
-
+          return true
         }
         this.email.errorMessage.push("This address is not valid")
         this.email.error = "error"
@@ -116,268 +113,268 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import './public/sass/colors.scss';
+@import './public/sass/colors.scss';
 
-  .main-contact {
-    background-color: $midnightGreen;
-    width: 100%;
-    height: 789px;
+.main-contact {
+  background-color: $midnightGreen;
+  width: 100%;
+  height: 789px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+
+  .contain-text {
+    width: 540px;
+    height: 428px;
+    margin-top: 241px;
+    h1 {
+      width: 350px;
+      height: 100px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 64px;
+      line-height: 100px;
+      color: $white;
+      margin-bottom: 16px;
+      margin-top: 0;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 48px;
+      color: $lightCoral;
+    }
+
+    ul {
+      padding-left: 0;
+      margin-top: 32px;
+
+      li {
+        list-style: none;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 28px;
+        color: $white;
+        display: flex;
+        align-items: center;
+      }
+
+      li span {
+        width: 72px;
+        height: 72px;
+        margin-right: 23px;
+      }
+    }
+  }
+
+  form {
+    margin-top: 241px;
     display: flex;
-    position: relative;
-    overflow: hidden;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 542px;
+    height: 420px;
+
+    input {
+      width: 540px;
+      height: 42px;
+      border: none;
+      background-color: transparent;
+      border-bottom: solid 1px $white;
+      cursor: pointer;
+
+      &::placeholder {
+        color: $white;
+        opacity: 0.6;
+        font-size: 15px;
+        font-family: 'Livvic', sans-serif;
+      }
+
+      &:focus {
+        outline: none;
+        border-bottom-color:#79C8C7;
+
+      }
+    }
+    input[type="text" i],input[type="email" i], textarea {
+      color: $white;
+      font-family: 'Livvic', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+    }
+    input.error {
+      border-bottom-color: $lightCoral;
+      &::placeholder {
+        color: $lightCoral
+      }
+
+    }
+    textarea {
+      width: 540px;
+      height: 84px;
+      border: none;
+      background-color: transparent;
+      border-bottom: solid 1px $white;
+      cursor: pointer;
+      &::placeholder {
+        color: $white;
+        opacity: 0.6;
+        font-size: 15px;
+        font-family: 'Livvic', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+      }
+      &:focus {
+        outline: none;
+        border-bottom-color:#79C8C7;
+      }
+    }
+    textarea.error {
+      border-bottom-color: $lightCoral;
+      color: $lightCoral;
+      &::placeholder  {
+        color: $lightCoral
+      }
+    }
+    .btn-submit {
+      border-style: solid;
+      border: none;
+      background-color: $white;
+      width: 123px;
+      height: 48px;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 33px;
+      color: $midnightGreen;
+    }
+    .error {
+      font-family: 'Livvic', sans-serif;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 13px;
+        color: $lightCoral;
+        span {
+          margin-right: 5px;
+        }
+    }
+    
+  }
+
+  .image-background-top {
+    position: absolute;
+    top: 245px;
+    left: -100px;
+  }
+
+  .image-background-bottom {
+    position: absolute;
+    bottom: 0;
+    right: -100px;
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .main-contact {
+    height: 1204px;
+    flex-direction: column;
 
     .contain-text {
-      width: 540px;
-      height: 428px;
-      margin-top: 241px;
+      width: 515px;
+      height: 384px;
+      margin: 224px auto 0 auto;
+
       h1 {
-        width: 350px;
-        height: 100px;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 64px;
-        line-height: 100px;
-        color: $white;
-        margin-bottom: 16px;
-        margin-top: 0;
+        margin: auto;
+        width: 248px;
       }
 
       p {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 32px;
-        line-height: 48px;
-        color: $lightCoral;
+        text-align: center;
       }
 
       ul {
-        padding-left: 0;
-        margin-top: 32px;
+        margin-bottom: 0;
+        margin-top: 24px;
 
         li {
-          list-style: none;
-          font-weight: bold;
-          font-size: 18px;
-          line-height: 28px;
-          color: $white;
-          display: flex;
-          align-items: center;
-        }
-
-        li span {
-          width: 72px;
-          height: 72px;
-          margin-right: 23px;
+          margin-bottom: 8px;
         }
       }
     }
 
     form {
-      margin-top: 241px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 542px;
-      height: 420px;
+      margin: 64px auto 0 auto;
 
-      input {
-        width: 540px;
-        height: 42px;
-        border: none;
-        background-color: transparent;
-        border-bottom: solid 1px $white;
-        cursor: pointer;
-
-        &::placeholder {
-          color: $white;
-          opacity: 0.6;
-          font-size: 15px;
-          font-family: 'Livvic', sans-serif;
-        }
-
-        &:focus {
-          outline: none;
-          border-bottom-color:#79C8C7;
-
-        }
-      }
-      input[type="text" i],input[type="email" i], textarea {
-        color: $white;
-        font-family: 'Livvic', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-      }
-      input.error {
-        border-bottom-color: $lightCoral;
-        &::placeholder {
-          color: $lightCoral
-        }
-  
-      }
-      textarea {
-        width: 540px;
-        height: 84px;
-        border: none;
-        background-color: transparent;
-        border-bottom: solid 1px $white;
-        cursor: pointer;
-        &::placeholder {
-          color: $white;
-          opacity: 0.6;
-          font-size: 15px;
-          font-family: 'Livvic', sans-serif;
-          font-style: normal;
-          font-weight: 400;
-        }
-        &:focus {
-          outline: none;
-          border-bottom-color:#79C8C7;
-        }
-      }
-      textarea.error {
-        border-bottom-color: $lightCoral;
-        color: $lightCoral;
-        &::placeholder  {
-          color: $lightCoral
-        }
-      }
       .btn-submit {
-        border-style: solid;
-        border: none;
-        background-color: $white;
-        width: 123px;
-        height: 48px;
-        font-size: 18px;
-        font-weight: 600;
-        margin-top: 33px;
-        color: $midnightGreen;
+        margin-top: 24px;
+        width: 123px !important;
       }
-      .error {
-        font-family: 'Livvic', sans-serif;
-          font-style: italic;
-          font-weight: bold;
-          font-size: 10px;
-          line-height: 13px;
-          color: $lightCoral;
-          span {
-            margin-right: 5px;
-          }
-      }
-     
     }
 
     .image-background-top {
-      position: absolute;
-      top: 245px;
-      left: -100px;
+      top: 216px;
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .main-contact {
+    height: 1132px;
+    justify-content: start;
+    .contain-text {
+      width: 327px;
+      height: 384px;
+      margin-top: 160px;
+      h1 {
+        font-size: 40px;
+        line-height: 40px;
+        width: 327px;
+        height: 40px;
+        text-align: center;
+
+      }
+
+      p {
+        height: 48px;
+        text-align: center;
+        padding-top: 16px;
+      }
+
+      ul {
+        height: 264px;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
+    form {
+      width: 327px;
+      height: 420px;
+      margin-top: 56px;
+
+      input {
+        width: 327px;
+      }
+
+      textarea {
+        width: 327px;
+
+      }
+    }
+
+    .image-background-top {
+      display: none;
     }
 
     .image-background-bottom {
-      position: absolute;
-      bottom: 0;
-      right: -100px;
+      bottom: -100px;
     }
   }
-
-  @media screen and (max-width: 1330px) {
-    .main-contact {
-      height: 1204px;
-      flex-direction: column;
-
-      .contain-text {
-        width: 515px;
-        height: 384px;
-        margin: 224px auto 0 auto;
-
-        h1 {
-          margin: auto;
-          width: 248px;
-        }
-
-        p {
-          text-align: center;
-        }
-
-        ul {
-          margin-bottom: 0;
-          margin-top: 24px;
-
-          li {
-            margin-bottom: 8px;
-          }
-        }
-      }
-
-      form {
-        margin: 64px auto 0 auto;
-
-        .btn-submit {
-          margin-top: 24px;
-          width: 123px !important;
-        }
-      }
-
-      .image-background-top {
-        top: 216px;
-      }
-    }
-  }
-
-  @media screen and (max-width: 740px) {
-    .main-contact {
-      height: 1132px;
-      justify-content: start;
-      .contain-text {
-        width: 327px;
-        height: 384px;
-        margin-top: 160px;
-        h1 {
-          font-size: 40px;
-          line-height: 40px;
-          width: 327px;
-          height: 40px;
-          text-align: center;
-
-        }
-
-        p {
-          height: 48px;
-          text-align: center;
-          padding-top: 16px;
-        }
-
-        ul {
-          height: 264px;
-          margin-top: 40px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-        }
-      }
-
-      form {
-        width: 327px;
-        height: 420px;
-        margin-top: 56px;
-
-        input {
-          width: 327px;
-        }
-
-        textarea {
-          width: 327px;
-
-        }
-      }
-
-      .image-background-top {
-        display: none;
-      }
-
-      .image-background-bottom {
-        bottom: -100px;
-      }
-    }
-  }
+}
 </style>

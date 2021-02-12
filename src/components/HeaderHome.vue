@@ -23,129 +23,129 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import './public/sass/colors.scss';
+@import './public/sass/colors.scss';
 
+.header-home {
+  background-color: $midnightGreen;
+  width: 100%;
+  height: 700px;
+  position: relative;
+
+  .text-header-home {
+    width: 1110px;
+    height: 200px;
+    display: flex;
+    margin: auto;
+    padding-top: 250px;
+
+    h1 {
+      font-size: 100px;
+      font-weight: 700;
+      line-height: 100px;
+      color: $white;
+      width: 635px;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      span {
+        color: $lightCoral;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 600;
+      width: 445px;
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      span {
+        width: 50px;
+        height: 4px;
+        background-color: $raptureBlue;
+      }
+    }
+  }
+
+  .img-background-dark {
+    position: absolute;
+    top: 250px;
+    left: -100px;
+  }
+
+  .img-background-pink {
+    position: absolute;
+    top: 600px;
+    left: 917px;
+  }
+}
+
+@media screen and (max-width: 1390px) {
   .header-home {
-    background-color: $midnightGreen;
     width: 100%;
-    height: 700px;
-    position: relative;
 
     .text-header-home {
-      width: 1110px;
-      height: 200px;
-      display: flex;
-      margin: auto;
-      padding-top: 250px;
+      width: 683px;
+      flex-direction: column;
+      align-items: center;
 
       h1 {
-        font-size: 100px;
-        font-weight: 700;
-        line-height: 100px;
-        color: $white;
-        width: 635px;
-        margin-top: 0;
-        margin-bottom: 0;
-
-        span {
-          color: $lightCoral;
-        }
+        font-size: 64px;
+        line-height: 56px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 24px;
       }
 
       p {
-        font-size: 18px;
-        line-height: 28px;
-        font-weight: 600;
-        width: 445px;
-        color: $white;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        text-align: center;
+        font-size: 15px;
+        width: 505px;
 
         span {
-          width: 50px;
-          height: 4px;
-          background-color: $raptureBlue;
+          display: none;
         }
       }
     }
 
     .img-background-dark {
-      position: absolute;
-      top: 250px;
-      left: -100px;
+      display: none;
     }
 
     .img-background-pink {
       position: absolute;
       top: 600px;
-      left: 917px;
+      left: 0;
+      right: 0;
+      margin: auto;
     }
   }
+}
 
-  @media screen and (max-width: 1390px) {
-    .header-home {
-      width: 100%;
+@media screen and (max-width: 690px) {
+  .header-home {
+    height: 567px;
 
-      .text-header-home {
-        width: 683px;
-        flex-direction: column;
-        align-items: center;
+    .text-header-home {
+      width: 327px;
+      padding-top: 160px;
 
-        h1 {
-          font-size: 64px;
-          line-height: 56px;
-          text-align: center;
-          width: 100%;
-          margin-bottom: 24px;
-        }
-
-        p {
-          text-align: center;
-          font-size: 15px;
-          width: 505px;
-
-          span {
-            display: none;
-          }
-        }
+      h1 {
+        font-size: 40px;
+        line-height: 40px;
       }
 
-      .img-background-dark {
-        display: none;
-      }
-
-      .img-background-pink {
-        position: absolute;
-        top: 600px;
-        left: 0;
-        right: 0;
-        margin: auto;
+      p {
+        width: 336px;
       }
     }
-  }
 
-  @media screen and (max-width: 690px) {
-    .header-home {
-      height: 567px;
-
-      .text-header-home {
-        width: 327px;
-        padding-top: 160px;
-
-        h1 {
-          font-size: 40px;
-          line-height: 40px;
-        }
-
-        p {
-          width: 336px;
-        }
-      }
-
-      .img-background-pink {
-        top: 467px;
-      }
+    .img-background-pink {
+      top: 467px;
     }
   }
+}
 </style>
