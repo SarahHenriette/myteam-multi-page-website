@@ -12,20 +12,20 @@
             </div>
             <form @submit.prevent="submit" action="">
               <label for="name"></label>
-              <input type="text" for="name" id="name" placeholder="Name" :class="error" >
-              <!-- <div class="error" v-if="!$v.name.required">This field is required</div> -->
+              <input type="text" for="name" name="name" id="name" v-model="name.value" @focus="focusInput" placeholder="Name" :class="name.error" >
+              <div :class="name.error" v-if="name.errorMessage.length > 0"><span v-for="message in name.errorMessage" :key="message">{{ message }}</span></div>
               
               <label for="email"></label>
-              <input type="email" for="email" id="email" placeholder="Email Address">
-              <!-- <div class="error" v-if="!$v.email.required">This field is required</div> -->
+              <input type="email" for="email" name="email" id="email" v-model="email.value" @focus="focusInput"  placeholder="Email Address" :class="email.error">
+              <div :class="email.error" v-if="email.errorMessage.length > 0"><span v-for="message in email.errorMessage" :key="message">{{ message }}</span></div>
 
               <label for="compagny-name"></label>
               <input type="text" for="compagny-name" id="compagny-name" placeholder="Compagny Name" >
               <label for="title"></label>
               <input type="text" for="title" id="title" placeholder="Title">
               <label for="message"></label>
-              <textarea name="message" id="message" placeholder="Message" cols="30" rows="10" ></textarea>
-              <!-- <div class="error" v-if="!$v.name.required">This field is required</div> -->
+              <textarea name="message" id="message" v-model="message.value" @focus="focusInput" placeholder="Message" cols="30" rows="10" :class="message.error"></textarea>
+              <div :class="message.error" v-if="message.errorMessage.length > 0"><span v-for="message in message.errorMessage" :key="message">{{ message }}</span></div>
 
               <input type="submit" :disabled="submitStatus === 'PENDING'" value="submit" id="btn-submit" class="btn btn-submit">
            
@@ -38,9 +38,7 @@
 </template>
 
 <script>
-// import { required, minLength, email} from 'vuelidate/lib/validators'
 import Footer from './../components/Footer'
-
 
 export default {
     name: 'Contact',
@@ -49,42 +47,70 @@ export default {
     }, 
     data () {
       return {
-        name: '',
-        email:'',
-        message:'',
+        name: {
+          value: "",
+          errorMessage: [],
+          error: ""
+        },
+        email:{
+          value: "",
+          errorMessage: [],
+          error: ""
+        },
+        message:{
+          value: "",
+          errorMessage: [],
+          error: ""
+        },
         submitStatus: null,
-        error: "error"
+        error: '',
+     
       }
     },
-    //  validations: {
-    //     name: {
-    //     required,
-    //     minLength: minLength(4)
-    //   },
-    //   email: {
-    //      required,
-    //      email
-    //   },
-    //   message: {
-    //     required,
-    //     minLength: minLength(4)
-    //   }
-    // },
     methods: {
-    //   submit() {
-    //   console.log('submit!')
-    //   console.log(this.$v)
-    //   this.$v.$touch()
-    //   if (this.$v.$invalid) {
-    //     this.submitStatus = 'ERROR'
-    //   } else {
-    //     this.submitStatus = 'PENDING'
-    //     setTimeout(() => {
-    //       this.submitStatus = 'OK'
-    //     }, 500)
-    //   }
-    //   console.log(this.submitStatus)
-    // }
+      submit() {
+        this.verifyInputEmpty(this.name)
+        this.verifyInputEmpty(this.email)
+        this.verifyInputEmpty(this.message)
+        this.verifyValidEmail()
+
+        if(this.name.value !== "" && this.email.value !== "" && this.message.value !== "") {
+          console.log("le message est envoyé")
+          alert('Votre message à bien été envoyé')
+          this.name.value = ""
+          this.email.value= ""
+          this.message.value = ""
+        }
+      }, 
+
+      verifyInputEmpty(variable) {
+        variable.errorMessage = []
+        if(!variable.value){
+          variable.error = "error"
+          variable.errorMessage.push("This field is required")
+        }
+      },
+      focusInput(e){
+        console.log(this.name )
+        this.actionFocusInput(e, "name", this.name)
+        this.actionFocusInput(e, "email", this.email)
+        this.actionFocusInput(e, "message", this.message)
+      }, 
+      actionFocusInput(e, value, variable){
+        if(e.target.name == value) {
+          variable.errorMessage = ""
+          variable.error = ""
+        }
+      },
+      verifyValidEmail() {
+        let emailValid = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+        if(emailValid.test(this.email.value) ) {
+          return console.log(true)
+
+        }
+        this.email.errorMessage.push("This address is not valid")
+        this.email.error = "error"
+      }
     }
 }
 </script>
@@ -105,8 +131,6 @@ export default {
       width: 540px;
       height: 428px;
       margin-top: 241px;
-      // margin-left: 165px;
-
       h1 {
         width: 350px;
         height: 100px;
@@ -181,6 +205,15 @@ export default {
       input[type="text" i],input[type="email" i], textarea {
         color: $white;
         font-family: 'Livvic', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+      }
+      input.error {
+        border-bottom-color: $lightCoral;
+        &::placeholder {
+          color: $lightCoral
+        }
+  
       }
       textarea {
         width: 540px;
@@ -194,13 +227,21 @@ export default {
           opacity: 0.6;
           font-size: 15px;
           font-family: 'Livvic', sans-serif;
+          font-style: normal;
+          font-weight: 400;
         }
         &:focus {
           outline: none;
           border-bottom-color:#79C8C7;
         }
       }
-
+      textarea.error {
+        border-bottom-color: $lightCoral;
+        color: $lightCoral;
+        &::placeholder  {
+          color: $lightCoral
+        }
+      }
       .btn-submit {
         border-style: solid;
         border: none;
@@ -219,7 +260,11 @@ export default {
           font-size: 10px;
           line-height: 13px;
           color: $lightCoral;
+          span {
+            margin-right: 5px;
+          }
       }
+     
     }
 
     .image-background-top {
