@@ -49,6 +49,7 @@ export default {
             border-style: solid;
             border-color: $darkGreen;
             color: $darkGreen;
+            border-radius: 50px!important;
             cursor: pointer;
             transition: background-color ease .5s, color ease .5s;
             ;
